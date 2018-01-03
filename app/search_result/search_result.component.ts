@@ -19,12 +19,33 @@ export class SearchResultComponent implements OnInit {
 
   constructor() { }
   ngOnInit() {
-    for (let parameters of KIND_PARAMETERS) {
-      if (this.item.source.doc_id.startsWith(parameters.docType)) {
-        this.parameters = parameters;
-        break;
-      }
-    }
+    // for (let parameters of KIND_PARAMETERS) {
+    //   if (this.item.source.collection === parameters.collection) {
+    //     this.parameters = parameters;
+    //     break;
+    //   }
+    // }
+    this.parameters = {
+      // docType: 'org/company',
+      label: {
+        'places': 'מקום',
+        'familyNames': 'שם משפחה',
+        'movies': 'סרט',
+        'personalities': 'אישיות',
+        'photoUnits': 'תמונה',
+        'unknown': 'לא ידוע'
+      }[this.item.source.collection],
+      // labelField: 'details.type',
+      mainNameField: 'title_he'
+      // secondaryNameField: 'id',
+      // amountField: 'received_amount',
+      // firstItemField: 'details.goal',
+      // firstItemLabel: 'מטרה',
+      // secondItemField: 'details.city',
+      // secondItemLabel: 'כתובת',
+      // minYearField: 'min_year',
+      // maxYearField: 'max_year',
+    };
   }
 
   get(field: string, default_value?: string) {

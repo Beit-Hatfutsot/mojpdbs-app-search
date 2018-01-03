@@ -1,5 +1,5 @@
 {
-  "name": "budgetkey-search-app",
+  "name": "mojp-search-app",
   "version": "1.0.0",
   "description": "UI for the search API",
   "engines": {
@@ -16,8 +16,6 @@
     "dist": "gulp && webpack --hide-modules",
     "dist-serve": "gulp && webpack --hide-modules --watch & npm start"
   },
-  "keywords": [],
-  "author": "Adam Kariv <adam@obudget.org>",
   "license": "MIT",
   "dependencies": {
     "@angular/common": "~2.2.0",
@@ -29,7 +27,7 @@
     "@angular/platform-browser-dynamic": "~2.2.0",
     "@angular/router": "~3.2.0",
     "angular-in-memory-web-api": "~0.1.15",
-    "budgetkey-ng2-components": "^0.1.6",
+    "mojp-ng2-components": "^0.1.1",
     "core-js": "^2.4.1",
     "lodash": "^4.17.2",
     "nunjucks": "^3.0.1",

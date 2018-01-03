@@ -6,7 +6,7 @@ import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { join } from 'lodash';
 
-import { URL } from '../_config/config';  // 'http://next.obudget.org/search';
+import { URL } from '../_config/config';
 import { SearchResults } from '../_model/SearchResults';
 
 @Injectable()
@@ -29,7 +29,7 @@ export class SearchService {
     let startTime: Date = new Date(); // update time-stamp
     let joinedkinds = join(kindsList, ',');
     return this.http
-      .get(`${URL}/${joinedkinds}/${term}/${this.startRange}/${this.endRange}/${pageSize}/${pageNumber}`)
+      .get(`${URL}/${joinedkinds}/${term}/${pageSize}/${pageNumber}`)
       .map((r: Response) => {
           let endTime = new Date();
           console.log('req time: ', (endTime.getTime()  - startTime.getTime()) / 1000, 'sec');

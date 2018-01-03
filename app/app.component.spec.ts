@@ -11,7 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { SearchService } from './_service/search.service';
 import { SearchComponent } from './search/search.component';
 
-import { BudgetKeyCommonModule } from 'budgetkey-ng2-components';
+import { MojpCommonModule } from 'mojp-ng2-components';
 import { SearchResultComponent } from './search_result/search_result.component';
 
 
@@ -24,7 +24,7 @@ describe('AppComponent', function () {
     return TestBed.configureTestingModule({
       imports: [
         HttpModule,
-        BudgetKeyCommonModule,
+        MojpCommonModule,
         AppRoutingModule,
       ],
       declarations: [

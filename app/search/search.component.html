@@ -6,7 +6,7 @@
         <input #searchBox
                class="form-control"
                type="text"
-               placeholder="חפשו במפתח"
+               placeholder="חפשו במאגרים"
                (keyup)="search(searchBox.value)"
                [value]="term"
                />
@@ -28,53 +28,53 @@
       </ul>
         <ul class='row col-xs-9 col-md-10'>
         <li class="active col-xs-3 col-md-2">
-          <a (click)="switchTab($event, 'budget')"
-            [class]= "displayDocs  === 'budget' ? 'activeclass'  : ''">סעיף תקציבי
+          <a (click)="switchTab($event, 'places')"
+            [class]= "displayDocs  === 'places' ? 'activeclass'  : ''">מקומות
             <span>
-                ({{resultTotalCount.budget ? resultTotalCount.budget.toLocaleString()  : '0'}})
+                ({{resultTotalCount.places ? resultTotalCount.places.toLocaleString()  : '0'}})
             </span>
           </a>
         </li>
         <li class="active col-xs-3 col-md-2">
-          <a (click)="switchTab($event, 'entities')"
-            [class]= "displayDocs  === 'entities' ? 'activeclass'  : ''">ארגון
+          <a (click)="switchTab($event, 'photounits')"
+            [class]= "displayDocs  === 'photounits' ? 'activeclass'  : ''">תמונות
             <span>
-                ({{resultTotalCount.entities ? resultTotalCount.entities.toLocaleString()  : '0'}})
+                ({{resultTotalCount.photounits ? resultTotalCount.photounits.toLocaleString()  : '0'}})
             </span>
           </a>
         </li>
         <li class="active col-xs-3 col-md-2">
-          <a (click)="switchTab($event, 'national-budget-changes')"
-            [class]= "displayDocs  === 'nationalbudgetchanges' ? 'activeclass'  : ''" >העברה תקציבית
+          <a (click)="switchTab($event, 'persons')"
+            [class]= "displayDocs  === 'persons' ? 'activeclass'  : ''" >אנשים (עצי משפחה)
             <span>
-                ({{resultTotalCount.nationalbudgetchanges ? resultTotalCount.nationalbudgetchanges.toLocaleString()  : '0'}})
+                ({{resultTotalCount.persons ? resultTotalCount.persons.toLocaleString()  : '0'}})
             </span>
           </a>
         </li>
         <li class="active col-xs-3 col-md-2">
-          <a (click)= "switchTab($event, 'supports')"
-            [class]= "displayDocs  === 'supports' ? 'activeclass'  : ''">תמיכות
+          <a (click)= "switchTab($event, 'movies')"
+            [class]= "displayDocs  === 'movies' ? 'activeclass'  : ''">וידאו
             <span>
-                ({{resultTotalCount.supports ? resultTotalCount.supports.toLocaleString()  : '0'}})
+                ({{resultTotalCount.movies ? resultTotalCount.movies.toLocaleString()  : '0'}})
             </span>
           </a>
         </li>
         <li class="active col-xs-3 col-md-2">
-          <a (click)="switchTab($event, 'tenders,contract-spending')"
-            [class]= "displayDocs  === 'procurement' ? 'activeclass'  : ''">רכש
+          <a (click)= "switchTab($event, 'personalities')"
+            [class]= "displayDocs  === 'personalities' ? 'activeclass'  : ''">אישים
             <span>
-                ({{(resultTotalCount.tenders + resultTotalCount.contractspending) ? (resultTotalCount.tenders + resultTotalCount.contractspending).toLocaleString()  : '0'}})
+                ({{resultTotalCount.personalities ? resultTotalCount.personalities.toLocaleString()  : '0'}})
             </span>
           </a>
         </li>
-        <!-- <li class="active col-xs-3 col-md-2">
-          <a href="#"  (click)="switchTab($event, resultTotalCount.people, 'people')"
-            [class]= "displayDocs  === 'people' ? 'activeclass'  : ''">אנשים
+        <li class="active col-xs-3 col-md-2">
+          <a (click)= "switchTab($event, 'familynames')"
+            [class]= "displayDocs  === 'familynames' ? 'activeclass'  : ''">שמות משפחה
             <span>
-                ({{resultTotalCount.people ? resultTotalCount.people.toLocaleString()  : '0'}})
+                ({{resultTotalCount.familynames ? resultTotalCount.familynames.toLocaleString()  : '0'}})
             </span>
           </a>
-        </li> -->
+        </li>
       </ul>
     </div>
 </div>

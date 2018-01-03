@@ -16,29 +16,17 @@
                       <span class="pretitle" *ngIf="parameters.secondaryNameField" innerHTML="{{get(parameters.secondaryNameField)}}"></span>
                       <span class="title" innerHTML="{{get(parameters.mainNameField)}}"></span>
                   </div>
-                  <div class="transaction" *ngIf="parameters.fromField">
-                      <span innerHTML="{{get(parameters.fromField)}}"></span>
-                      &nbsp;&#10229;&nbsp;
-                      <span innerHTML="{{get(parameters.toField)}}"></span>
-                  </div>
               </a>
           </div>
           <div class="col-md-4 pull-left">
-              <div *ngIf="get(parameters.minYearField) || get(parameters.maxYearField)" class="pay-period">
-                  תקופת תשלום:
-                  <br/>
-                  {{get(parameters.maxYearField, '&nbsp;&nbsp;&nbsp;&nbsp;')}}
-                  -
-                  {{get(parameters.minYearField, '&nbsp;&nbsp;&nbsp;&nbsp;')}}
-              </div>
-              <div class="amount">{{get(parameters.amountField) ? '₪ ' + get(parameters.amountField).toLocaleString()  : '-'}}</div>
+
           </div>
       </div>
       <div class="row bottom-part">
           <div class="col-md-12">
-              <div class="first-line" *ngIf="parameters.firstItemLabel">
-                  <label>{{parameters.firstItemLabel}}:</label>
-                  <span innerHTML="{{get(parameters.firstItemField)}}"></span>
+              <div class="first-line">
+                  <!--<label>{{parameters.firstItemLabel}}:</label>-->
+                  <span innerHTML="{{get('content_text_he')}}"></span>
               </div>
               <div class="second-line" *ngIf="parameters.secondItemField">
                   <label>{{parameters.secondItemLabel}}:</label>
